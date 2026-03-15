@@ -37,11 +37,9 @@ jobs:
         context: .
         push: true
         tags: manjvija/fastapi-app:latest
-        
     - name: Configure Kubeconfig
       run: |
         echo "${{ secrets.KUBECONFIG }}" > $HOME/.kube/config
-        
     - name: Test cluster connection
       run: kubectl get pods -n app
 
