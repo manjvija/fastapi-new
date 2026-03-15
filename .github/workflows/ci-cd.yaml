@@ -39,6 +39,7 @@ jobs:
         tags: manjvija/fastapi-app:latest
     - name: Configure Kubeconfig
       run: |
+        mkdir -p $HOME/.kube
         echo "${{ secrets.KUBECONFIG }}" > $HOME/.kube/config
     - name: Test cluster connection
       run: kubectl get pods -n app
