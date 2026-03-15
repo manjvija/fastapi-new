@@ -1,0 +1,12 @@
+fastapi==0.110.0
+uvicorn[standard]==0.29.0
+
+# OpenTelemetry core
+opentelemetry-api==1.24.0
+opentelemetry-sdk==1.24.0
+
+# Prometheus exporter for metrics
+opentelemetry-exporter-prometheus==0.41b0
+
+# Optional: testing and linting
+pytest==8.1.1
