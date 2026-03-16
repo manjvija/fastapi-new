@@ -36,14 +36,4 @@ jobs:
       with:
         context: .
         push: true
-        tags: manjvija/fastapi-app:latest
-    - name: Configure Kubeconfig
-      run: |
-        mkdir -p $HOME/.kube
-        echo "${{ secrets.KUBECONFIG }}" > $HOME/.kube/config
-    - name: Test cluster connection
-      run: kubectl get pods -n app
-
-    - name: Deploy to cluster
-      run: |
-        kubectl set image deployment/fastapi-app fastapi-app=yourusername/fastapi-app:latest -n app
+        tags: manjvijja/fastapi-app:latest
